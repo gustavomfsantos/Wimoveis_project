@@ -11,14 +11,21 @@ Data Scraping: The initial step involves using Selenium to scrape data from the 
 ### Feature Engineering: 
 Features are created or transformed to improve the performance of the predictive model. This step may involve feature scaling, encoding categorical variables, or creating new features based on domain knowledge.
 
+![Target (Apartament Price) Distribution](Plots/histogram_price_wimoveis.png)
+
 ### Data Analysis: 
 Data analysis is performed using Databricks notebooks. This includes exploratory data analysis (EDA) to understand the relationships between variables and visualize insights from the data.
+
+![Neighbourhood Distribution](Plots/listing_by_neighbourhood.png)
 
 ### Modeling: 
 An elastic net regression model is fit to the data to estimate apartment prices. This model considers the effects of various features on the price and helps in understanding their importance.
 
 ### Inference Tool: 
 The coefficients obtained from the elastic net model are used to build an inference tool. This tool allows users to estimate the price of an apartment based on selected features such as the number of rooms, apartment area, bathrooms, and neighborhood.
+
+![Asa Norte Neighbourhood example with 60 m2, 2 rooms, 2 baths and 1 garage spot](Plots/asa_norte_price.png)
+![Asa Sul Neighbourhood example with same characteristics from Asa Norte example](Plots/asa_sul_price.png)
 
 ### Dependencies
 Selenium
