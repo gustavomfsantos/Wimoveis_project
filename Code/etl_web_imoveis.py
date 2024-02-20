@@ -481,7 +481,7 @@ def remove_outliers(data_path, transformed_data_name, final_data_name):
     print('Target Columns Distribution')
     plt.figure(figsize=(10, 5))
     plt.subplot(1, 2, 1)  # 1 row, 2 columns, subplot 1
-    sns.histplot(df['Price_BRL'], bins=10, kde=True, color='skyblue')
+    sns.histplot(df['Price_BRL'], bins=10, kde=True, color='black')
     plt.title('Histogram of Price_BRL Million')
     plt.xlabel('Target')
     plt.ylabel('Frequency')
@@ -700,7 +700,7 @@ if __name__ == "__main__":
     
     # transform_dataset(data_path, raw_data_name, transformed_data_name)
 
-    # remove_outliers(data_path, transformed_data_name, final_data_name)
+    remove_outliers(data_path, transformed_data_name, final_data_name)
 
     model_list = ['EN']
     target = 'Price_BRL'
@@ -708,7 +708,7 @@ if __name__ == "__main__":
     folds = 5
     tune_tryouts = 100
     
-    final_adjust(data_path, final_data_name, ml_data)
-    model_params_grid = parameters_grid(model_list)
-    model_inference(data_path, ml_data, random_numb, folds, tune_tryouts, 
-                        target, model_list, model_params_grid, model_path)
+    # final_adjust(data_path, final_data_name, ml_data)
+    # model_params_grid = parameters_grid(model_list)
+    # model_inference(data_path, ml_data, random_numb, folds, tune_tryouts, 
+    #                     target, model_list, model_params_grid, model_path)
